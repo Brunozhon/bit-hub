@@ -7,5 +7,15 @@
   </head>
   <body>
     <h1>BitHub</h1>
+    <div id="signin">
+    </div>
+    <script>
+      var h = location.hash.split("#")[1].split("&");
+      var signin = h[0].split("=")[1];
+      if (signin == "signin") {
+        var elem = document.getElementById("signin")
+        elem.innerHTML = "<p>Username: <input /></p>"
+      }
+    </script>
   </body>
 </html>
