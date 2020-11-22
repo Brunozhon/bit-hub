@@ -17,14 +17,11 @@
         var elem = document.getElementById("signin")
         elem.innerHTML = '<p>Username: <input id="username" /></p><p>You will be redirected to... </p>';
         var user = document.getElementById("username");
+      }     
+      user.onkeyup = function() {
+        var url = red + "=1&user=" + user.value;
+        elem.innerHTML += "<p>" + url + " once you sign in.</p>"
       }
-      try {
-        user.onkeyup = function() {
-          var url = red + "=1&user=" + user.value;
-          elem.innerHTML += "<p>" + url + " once you sign in.</p>"
-        }
-      }
-      catch(err) {}
     </script>
   </body>
 </html>
