@@ -15,13 +15,14 @@
       var h = location.hash.split("#")[1].split("&");
       var signin = h[0].split("=")[1];
       var red = decodeURIComponent(h[1].split("=")[1]);
+      var url;
       if (signin == "signin") {
         var user = document.getElementById("username");
         var elem = document.getElementById("out")
       }     
       user.onkeyup = function(event) {
         event.preventDefault()
-        var url = red + "=1&user=" + user.value;
+        url = red + "=1&user=" + user.value;
         elem.innerHTML = "<p>" + url + " once you sign in.</p>"
       }
       function _sign_in_() {
