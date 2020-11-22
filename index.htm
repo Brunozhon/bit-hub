@@ -16,17 +16,21 @@
       var signin = h[0].split("=")[1];
       var red = decodeURIComponent(h[1].split("=")[1]);
       var url;
-      if (signin == "signin") {
-        var user = document.getElementById("username");
-        var elem = document.getElementById("out")
-      }     
-      user.onkeyup = function(event) {
-        event.preventDefault()
-        url = red + "=1&user=" + user.value + "&mention=@" + user.value + "&remenber=1";
-        elem.innerHTML = "<p>" + url + " once you sign in.</p>"
-      }
-      function _sign_in_() {
-        location.assign(url);
+      if (sessionStorage.getItem("userdata") != undefined) {
+        location.assign("/bit-hub/user/")
+      } else {
+        if (signin == "signin") {
+          var user = document.getElementById("username");
+          var elem = document.getElementById("out")
+        }     
+        user.onkeyup = function(event) {
+          event.preventDefault()
+          url = red + "=1&user=" + user.value + "&mention=@" + user.value + "&remenber=1";
+          elem.innerHTML = "<p>" + url + " once you sign in.</p>"
+        }
+        function _sign_in_() {
+          location.assign(url);
+        }
       }
     </script>
   </body>
