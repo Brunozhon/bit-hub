@@ -16,7 +16,7 @@
       var signin = h[0].split("=")[1];
       var red = decodeURIComponent(h[1].split("=")[1]);
       var url;
-      if (sessionStorage.getItem("userdata") != undefined) {
+      if (localStorage.getItem("userdata") != undefined) {
         location.assign("/bit-hub/user/")
       } else {
         if (signin == "signin") {
