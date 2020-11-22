@@ -17,8 +17,8 @@
         var elem = document.getElementById("signin")
         elem.innerHTML = '<p>Username: <input id="username" /></p><p>You will be redirected to... </p>';
         var user = document.getElementById("username");
-        var url = red + "=1&user=" + user.value;
         user.onkeyup = function() {
+          var url = red + "=1&user=" + user.value;
           elem.innerHTML += "<p>" + url + " once you sign in.</p>"
         }
       }
