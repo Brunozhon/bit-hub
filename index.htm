@@ -15,10 +15,12 @@
       var red = decodeURIComponent(h[1].split("=")[1]);
       if (signin == "signin") {
         var elem = document.getElementById("signin")
-        elem.innerHTML = '<p>Username: <input id="username" /></p><p>You will be redirected to ';
+        elem.innerHTML = '<p>Username: <input id="username" /></p><p>You will be redirected to... </p>';
         var user = document.getElementById("username");
         var url = red + "=1&user=" + user.value;
-        elem.innerHTML += url + " once you sign in.</p>"
+        user.onkeyup = function() {
+          elem.innerHTML += "<p>" + url + " once you sign in.</p>"
+        }
       }
     </script>
   </body>
