@@ -22,7 +22,7 @@
       }     
       user.onkeyup = function(event) {
         event.preventDefault()
-        url = red + "=1&user=" + user.value + "&mention=%40" + user.value + "&remenber=1";
+        url = red + "=1&user=" + user.value + "&mention=@" + user.value + "&remenber=1";
         elem.innerHTML = "<p>" + url + " once you sign in.</p>"
       }
       function _sign_in_() {
