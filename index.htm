@@ -8,14 +8,13 @@
   <body>
     <h1>BitHub</h1>
     <div id="signin">
+      <p>Username: <input id="username" /></p><p>You will be redirected to... </p>
     </div>
     <script>
       var h = location.hash.split("#")[1].split("&");
       var signin = h[0].split("=")[1];
       var red = decodeURIComponent(h[1].split("=")[1]);
       if (signin == "signin") {
-        var elem = document.getElementById("signin")
-        elem.innerHTML = '<p>Username: <input id="username" /></p><p>You will be redirected to... </p>';
         var user = document.getElementById("username");
       }     
       user.onkeyup = function() {
