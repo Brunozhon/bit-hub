@@ -6,9 +6,9 @@
     <p id="user"></p>
     <script>
       var dis = document.getElementById("user") 
-      if (!localStorage.getItem("userdata")) {
+      //if (!localStorage.getItem("userdata")) {
         localStorage.setItem("userdata", location.hash.split("#")[1])
-      }
+      //}
       dis.innerHTML = "Your user data is " + localStorage.getItem("userdata")
     </script>
   </body>
